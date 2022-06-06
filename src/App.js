@@ -1,14 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout/Layout';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </header>
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
