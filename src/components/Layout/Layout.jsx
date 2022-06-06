@@ -1,5 +1,5 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Dialog, Transition } from '@headlessui/react';
 import {
   CalendarIcon,
@@ -15,20 +15,46 @@ import {
   XIcon,
 } from '@heroicons/react/outline';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Company', href: '#', icon: BriefcaseIcon, current: false },
-  { name: 'Financials', href: '#', icon: ChartBarIcon, current: false },
-  { name: 'Compliance', href: '#', icon: ClipboardListIcon, current: false },
-  { name: 'Personal', href: '#', icon: UserIcon, current: false },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Layout() {
+export default function Layout(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  let location = useLocation();
+
+  const navigation = [
+    {
+      name: 'Dashboard',
+      href: '/',
+      icon: HomeIcon,
+      current: location.pathname === '/',
+    },
+    {
+      name: 'Company',
+      href: 'company',
+      icon: BriefcaseIcon,
+      current: location.pathname === '/company',
+    },
+    {
+      name: 'Financials',
+      href: 'financials',
+      icon: ChartBarIcon,
+      current: location.pathname === '/financials',
+    },
+    {
+      name: 'Compliance',
+      href: 'compliance',
+      icon: ClipboardListIcon,
+      current: location.pathname === '/compliance',
+    },
+    {
+      name: 'Personal',
+      href: 'personal',
+      icon: UserIcon,
+      current: location.pathname === '/personal',
+    },
+  ];
 
   return (
     <>
@@ -101,9 +127,9 @@ export default function Layout() {
                   </div>
                   <nav className="mt-5 px-2 space-y-1">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? 'bg-gray-100 text-gray-900'
@@ -121,7 +147,7 @@ export default function Layout() {
                           aria-hidden="true"
                         />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
@@ -226,22 +252,7 @@ export default function Layout() {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <main className="flex-1">
-            <div className="py-6">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold text-gray-900">
-                  Dashboard
-                </h1>
-              </div>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                {/* Replace with your content */}
-                <div className="py-4">
-                  <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
-                </div>
-                {/* /End replace */}
-              </div>
-            </div>
-          </main>
+          {props.children}
         </div>
       </div>
     </>
