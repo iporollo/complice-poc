@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react';
 import { ExclamationIcon, XIcon, CheckIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom';
 
 const stats = [
   { name: 'Total Subscribers', stat: '71,897' },
@@ -105,12 +106,12 @@ const Cards = () => (
         <p className="text-sm font-medium">06/12/2020</p>
         <dt className="mt-1 text-sm font-medium text-gray-500 truncate">EIN</dt>
         <p className="text-sm font-medium">*********</p>
-        <a
-          href="#"
+        <Link
+          to="company"
           className=" flex justify-center items-center my-2 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
         >
           See more
-        </a>
+        </Link>
       </div>
       <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
         <div className="mb-2">
@@ -136,12 +137,12 @@ const Cards = () => (
             11 months
           </dd>
         </div>
-        <a
-          href="#"
+        <Link
+          to="financials"
           className=" flex justify-center items-center mt-3 mb-1 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
         >
           See more
-        </a>
+        </Link>
       </div>
     </dl>
   </div>
@@ -166,6 +167,13 @@ const List = () => {
     {
       id: 3,
       target: 'California',
+      icon: CheckIcon,
+      iconBackground: 'bg-green-500',
+      date: 'Jun 20',
+    },
+    {
+      id: 3,
+      target: 'San Francisco',
       icon: CheckIcon,
       iconBackground: 'bg-green-500',
       date: 'Jun 20',
