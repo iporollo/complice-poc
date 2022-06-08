@@ -37,16 +37,16 @@ export default function Layout(props) {
       current: location.pathname === '/company',
     },
     {
-      name: 'Financials',
-      href: 'financials',
-      icon: ChartBarIcon,
-      current: location.pathname === '/financials',
-    },
-    {
       name: 'Compliance',
       href: 'compliance',
       icon: ClipboardListIcon,
       current: location.pathname === '/compliance',
+    },
+    {
+      name: 'Financials',
+      href: 'financials',
+      icon: ChartBarIcon,
+      current: location.pathname === '/financials',
     },
     {
       name: 'Personal',
@@ -163,7 +163,7 @@ export default function Layout(props) {
                       </div>
                       <div className="ml-3">
                         <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                          John Doe
+                          Richard Hendricks
                         </p>
                         <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
                           View profile
@@ -230,7 +230,7 @@ export default function Layout(props) {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                      John Doe
+                      Richard Hendricks
                     </p>
                     <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
                       View profile
