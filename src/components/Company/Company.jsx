@@ -22,9 +22,9 @@ export default function Company() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-4">
           <InfoCards />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-4">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-4">
           <BusinessStanding />
-        </div>
+        </div> */}
       </div>
     </main>
   );
