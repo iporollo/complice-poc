@@ -14,7 +14,9 @@ export default function Dashboard() {
       <div className="py-6">
         <Banner />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+          <h1 className="text-2xl font-semibold text-gray-900">
+            Company Dashboard
+          </h1>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <Cards />
@@ -77,75 +79,71 @@ const Banner = () => {
 };
 
 const Cards = () => (
-  <div>
-    <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-      <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-        <dd className="mb-1 text-3xl font-semibold text-gray-900">
-          Vocable Inc.
-        </dd>
-        <dt className="text-sm font-medium text-gray-500 truncate">Address</dt>
-        <p className="text-sm font-medium">
-          2261 MARKET STREET #4162 SAN FRANCISCO CA 94114
-        </p>
-        <dt className="mt-1 text-sm font-medium text-gray-500 truncate">
-          Registered
+  <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+    <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+      <dd className="mb-1 text-3xl font-semibold text-gray-900">
+        Pied Piper Inc.
+      </dd>
+      <dt className="text-sm font-medium text-gray-500 truncate">Address</dt>
+      <p className="text-sm font-medium">
+        2261 MARKET STREET #4162 SAN FRANCISCO CA 94114
+      </p>
+      <dt className="mt-1 text-sm font-medium text-gray-500 truncate">
+        Registered
+      </dt>
+      <p className="text-sm font-medium">06/12/2020</p>
+      <dt className="mt-1 text-sm font-medium text-gray-500 truncate">EIN</dt>
+      <p className="text-sm font-medium">*********</p>
+      <Link
+        to="company"
+        className=" flex justify-center items-center my-2 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
+      >
+        See more
+      </Link>
+    </div>
+    <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+      <div className="border-b-2 pb-4">
+        <dt className="text-sm font-medium text-gray-500 truncate">
+          Business Status
         </dt>
-        <p className="text-sm font-medium">06/12/2020</p>
-        <dt className="mt-1 text-sm font-medium text-gray-500 truncate">EIN</dt>
-        <p className="text-sm font-medium">*********</p>
-        <Link
-          to="company"
-          className=" flex justify-center items-center my-2 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
-        >
-          See more
-        </Link>
+        <dd className="mt-1 text-3xl font-semibold text-green-500">
+          Good Standing
+        </dd>
       </div>
-      <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-        <div className="border-b-2 pb-4">
-          <dt className="text-sm font-medium text-gray-500 truncate">
-            Business Status
-          </dt>
-          <dd className="mt-1 text-3xl font-semibold text-green-500">
-            Good Standing
-          </dd>
-        </div>
-        <div className="mt-5">
-          <List />
-        </div>
+      <div className="mt-5">
+        <List />
       </div>
-      <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-        <div className="mb-2">
-          <dt className="text-sm font-medium text-gray-500 truncate">
-            Bank Balance
-          </dt>
-          <dd className="mt-1 text-3xl font-semibold text-gray-900">
-            1,234,567.89
-          </dd>
-        </div>
-        <div className="mb-2">
-          <dt className="text-sm font-medium text-gray-500 truncate">Burn</dt>
-          <dd className="mt-1 text-3xl font-semibold text-gray-900">
-            100,234.89{' '}
-            <span className="text-sm font-medium text-gray-500 truncate">
-              / month
-            </span>
-          </dd>
-        </div>
-        <div className="mb-2">
-          <dt className="text-sm font-medium text-gray-500 truncate">Runway</dt>
-          <dd className="mt-1 text-3xl font-semibold text-gray-900">
-            11 months
-          </dd>
-        </div>
-        <Link
-          to="financials"
-          className=" flex justify-center items-center mt-3 mb-1 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
-        >
-          See more
-        </Link>
+    </div>
+    <div className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+      <div className="mb-2">
+        <dt className="text-sm font-medium text-gray-500 truncate">
+          Bank Balance
+        </dt>
+        <dd className="mt-1 text-3xl font-semibold text-gray-900">
+          1,234,567.89
+        </dd>
       </div>
-    </dl>
-  </div>
+      <div className="mb-2">
+        <dt className="text-sm font-medium text-gray-500 truncate">Burn</dt>
+        <dd className="mt-1 text-3xl font-semibold text-gray-900">
+          100,234.89{' '}
+          <span className="text-sm font-medium text-gray-500 truncate">
+            / month
+          </span>
+        </dd>
+      </div>
+      <div className="mb-2">
+        <dt className="text-sm font-medium text-gray-500 truncate">Runway</dt>
+        <dd className="mt-1 text-3xl font-semibold text-gray-900">11 months</dd>
+      </div>
+      <Link
+        to="financials"
+        className=" flex justify-center items-center mt-3 mb-1 py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
+      >
+        See more
+      </Link>
+    </div>
+  </dl>
 );
 
 const List = () => {
@@ -218,7 +216,7 @@ const List = () => {
                   </div>
                   <div className="text-right text-sm whitespace-nowrap text-gray-500">
                     <a href="#" dateTime={event.datetime} className="underline">
-                      Check Status
+                      See details
                     </a>
                   </div>
                 </div>
