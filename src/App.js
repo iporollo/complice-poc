@@ -3,6 +3,7 @@ import './App.css';
 import Company from './components/Company/Company';
 import Financials from './components/Financials/Financials';
 import Compliance from './components/Compliance/Compliance';
+import ComplianceDetail from './components/ComplianceDetail/ComplianceDetail';
 import Personal from './components/Personal/Personal';
 import Dashboard from './components/Dashboard/Dashboard';
 import Layout from './components/Layout/Layout';
@@ -17,7 +18,7 @@ function App() {
         <Route path="compliance" element={<Compliance />} />
         <Route
           path="compliance/california-statement-of-information"
-          element={<>here we are</>}
+          element={<ComplianceDetail />}
         />
         <Route path="personal" element={<Personal />} />
       </Routes>
