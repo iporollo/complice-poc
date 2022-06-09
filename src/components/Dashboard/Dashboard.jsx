@@ -47,20 +47,23 @@ const Banner = () => {
               <p className="ml-3 font-medium text-white truncate">
                 <span className="inline">
                   Upcoming{' '}
-                  <a href="#" className="font-bold underline">
+                  <Link
+                    to="compliance/california-statement-of-information"
+                    className="font-bold underline"
+                  >
                     California Statement of Information
-                  </a>{' '}
+                  </Link>{' '}
                   filing deadline <b>June 21st</b>.
                 </span>
               </p>
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-              <a
-                href="#"
+              <Link
+                to="compliance/california-statement-of-information"
                 className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"
               >
                 File now
-              </a>
+              </Link>
             </div>
             <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
               <button
@@ -261,12 +264,12 @@ const Timeline = () => (
           Information. It's a required filing that keeps the state updated with
           information about participants in the company.
         </p>
-        <a
-          href="#"
+        <Link
+          to="compliance/california-statement-of-information"
           className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 text-indigo-600 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700"
         >
           File now
-        </a>
+        </Link>
       </li>
       <li className="mb-10 ml-6">
         <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white ">

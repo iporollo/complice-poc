@@ -220,7 +220,7 @@ const CaliforniaState = () => {
     {
       title: 'California Statement of Information (Form SI-550)',
       details: `In California a business’s annual report is called the Statement of Information. It's a required filing that keeps the state updated with information about participants in the company.`,
-      href: '#',
+      href: 'compliance/california-statement-of-information',
       icon: ExclamationIcon,
       iconForeground: 'text-rose-700',
       iconBackground: 'bg-rose-50',

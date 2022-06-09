@@ -15,6 +15,10 @@ function App() {
         <Route path="company" element={<Company />} />
         <Route path="financials" element={<Financials />} />
         <Route path="compliance" element={<Compliance />} />
+        <Route
+          path="compliance/california-statement-of-information"
+          element={<>here we are</>}
+        />
         <Route path="personal" element={<Personal />} />
       </Routes>
     </Layout>
